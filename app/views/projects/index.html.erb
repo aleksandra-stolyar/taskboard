@@ -1,0 +1,18 @@
+<h1>My TODO Lists</h1> <div>
+ <a href=<%= new_project_path %>>
+  <button>Add TODO List</button>
+ </a>
+</div>
+ 
+  <% @projects.each do |project| %>
+    <h2> <%= link_to project.name, action: :show, id: project.id %></h2>
+
+      <%= link_to 'Edit | ', action: :edit, id: project.id %>
+      <%= link_to 'Delete', project_path(project),
+                    method: :delete, data: { confirm: 'Are you sure?' } %>
+   
+  <% end %>
+
+  
+
+

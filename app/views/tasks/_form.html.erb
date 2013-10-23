@@ -1,0 +1,13 @@
+
+<%=  form_for([@project, @task]) do |f| %>
+<%= render "shared/error_messages", :target => f.object %>
+
+    <img src = "http://www.actorsguild.co.uk/wp-content/themes/actorsguild/images/plus-icon.png">
+    <%= f.text_field :name, :placeholder => "Task name", required: :true %>
+    <%= f.text_field  :deadline, :placeholder => "Deadline", required: :true %>
+    <!-- <span id= "submit-btn"> -->
+      <%= f.submit("Add task") %>
+    <!-- </span> -->
+ 
+
+<% end %>

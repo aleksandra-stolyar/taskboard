@@ -1,0 +1,22 @@
+<section id="todoapp">
+
+  <!-- <h1><%= @project.name %></h1> -->
+  <h1>  
+    <%= best_in_place @project, :name, path: project_url %>
+  </h1>
+  <header id="header">
+           <%= link_to image_tag("http://webtaby.com/images/delete-icon.png"), project_path(@project),
+               method: :delete, data: { confirm: 'Are you sure?' } %>
+  </header>
+  <!-- <label2></label2> -->
+  <ul id="todo-list" data-sortable-url="<% project_url(@project) %>">
+   <li><%= render "tasks/form"%></li>
+
+    <%=render @project.tasks.order(:priority)%>
+</section>
+<p>
+ <!--  <%= link_to 'Delete project | ', project_path(@project),
+                      method: :delete, data: { confirm: 'Are you sure?' } %> -->
+
+  <%= link_to 'Back to projects list', projects_path %>
+</p>

@@ -1,0 +1,23 @@
+<style>
+  #date { 
+  color: #a88a8a;}
+  </style>
+
+  <!-- <li class> -->
+  <%= content_tag_for :li, task do %>
+  <span id = "checkbox" >
+    <%= best_in_place task, :is_done, type: :checkbox, collection: ["&#x2610;", "&#x2611;"], path: project_task_url(@project, task) %>  
+  </span>
+  <label>
+    <%= best_in_place task, :name, path: project_task_url(@project, task)%>
+  </label> 
+  <span id="date">
+      <%= best_in_place task, :deadline, type: :date, path: project_task_url(@project, task) %>
+  </span>
+  <button class="destroy" name= "delete_btn">
+    <%= link_to image_tag("http://webtaby.com/images/delete-icon.png"), [task.project, task],
+               method: :delete %>
+  </button>
+    <% end %>
+  <!-- </li> -->
+
