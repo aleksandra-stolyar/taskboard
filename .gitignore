@@ -1,4 +1,4 @@
-./bundle/*
+/.bundle/*
 /vendor/bundle
 /log/*
 /tmp/*
