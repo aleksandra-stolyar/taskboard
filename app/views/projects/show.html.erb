@@ -1,6 +1,5 @@
-<section id="todoapp">
 
-  <!-- <h1><%= @project.name %></h1> -->
+<section id="todoapp">
   <h1>  
     <%= best_in_place @project, :name, path: project_url %>
   </h1>
@@ -15,8 +14,6 @@
     <%=render @project.tasks.order(:priority)%>
 </section>
 <p>
- <!--  <%= link_to 'Delete project | ', project_path(@project),
-                      method: :delete, data: { confirm: 'Are you sure?' } %> -->
 
   <%= link_to 'Back to projects list', projects_path %>
 </p>
