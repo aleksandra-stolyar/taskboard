@@ -48,3 +48,5 @@ gem 'acts_as_list'
 # gem 'debugger', group: [:development, :test]
 
 gem 'rails_12factor', group: :production
+
+gem 'newrelic_rpm'
